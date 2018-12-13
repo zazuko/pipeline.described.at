@@ -1,0 +1,48 @@
+@base <https://pipeline.described.at/> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+
+<>
+  schema:hasPart
+    <Pipeline>,
+    <Readable>,
+    <ReadableObjectMode>,
+    <Step>,
+    <Writable>,
+    <WritableObjectMode>,
+    <stepList>,
+    <steps>.
+
+<Pipeline> a rdfs:Class;
+  rdfs:label "Pipeline";
+  rdfs:comment "Definition of a Pipeline".
+
+<Readable> a rdfs:Class;
+  rdfs:label "Readable";
+  rdfs:comment "Readable Stream".
+
+<ReadableObjectMode> a rdfs:Class;
+  rdfs:label "Readable in Object Mode";
+  rdfs:comment "Readable Stream in Object Mode".
+
+<Step> a rdfs:Class;
+  rdfs:label "Step";
+  rdfs:comment "Definition of a Pipeline Step".
+
+<Writable> a rdfs:Class;
+  rdfs:label "Writable";
+  rdfs:comment "Writable Stream".
+
+<WritableObjectMode> a rdfs:Class;
+  rdfs:label "Writable in Object Mode";
+  rdfs:comment "Writable Stream in Object Mode".
+
+<stepList> a rdf:Property;
+  rdfs:label "List of Steps";
+  rdfs:comment "Ordered List of Pipeline Steps".
+
+<steps> a rdf:Property;
+  rdfs:label "Steps";
+  rdfs:comment "Definition of Steps for a Pipeline".
