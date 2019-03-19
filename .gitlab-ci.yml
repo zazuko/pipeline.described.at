@@ -1,7 +1,0 @@
-deploy:
-  stage: deploy
-  image: cdrx/rancher-gitlab-deploy
-  script:
-  - upgrade --environment default --stack pipeline-described-at --service web --new-image $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
-  only:
-  - tags
